@@ -62,7 +62,7 @@ function ExpenseForm(props) {
           />
         </div>
       </div>
-      <div className="flex justify-center \">
+      <div className="flex justify-center items-center space-x-10 my-3	">
         <button
           className="bg-purple-800 lg:h-10 lg:w-1/5 w-28 text-white mt-8 rounded p-1"
           onClick={props.onCancel}

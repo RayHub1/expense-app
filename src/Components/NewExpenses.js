@@ -18,7 +18,7 @@ function NewExpenses(props) {
     props.expenseFormData(expenseData);
   };
   return (
-    <div className="lg:w-1/2 w-full  bg-blue-500 rounded flex items-center">
+    <div className="lg:w-1/2 w-full  bg-blue-500 rounded flex items-center justify-center">
       {!displayForm && (
         <button
           onClick={displayButtonHandler}
