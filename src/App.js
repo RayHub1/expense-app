@@ -9,7 +9,7 @@ const DUMMY_EXPENSES = [
     amount: 94.12,
     date: new Date(2020, 7, 14),
   },
-  { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
+  { id: "e2", title: "New TV", amount: 799.49, date: new Date(2023, 2, 12) },
   {
     id: "e3",
     title: "Car Insurance",
@@ -19,21 +19,24 @@ const DUMMY_EXPENSES = [
   {
     id: "e4",
     title: "New Desk (Wooden)",
-    amount: 450,
-    date: new Date(2021, 5, 12),
+    amount: 450,    
+    date: new Date(2022, 5, 12),
   },
+  
 ];
 function App() {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
   const passedExpenseFormData = (passedData) => {
     setExpenses((prevExpenses) => [passedData, ...prevExpenses]);
+    console.log(passedData)
   };
 
   return (
-    <div className="flex flex-col items-center py-10 w-full">
-      <NewExpenses />
+    <div className="flex flex-col items-center w-full min-h-screen bg-gray-900">
+      <NewExpenses expenseFormData={passedExpenseFormData} />
       <Expenses items={expenses} />
+      <div className="text-white">All right reserved © RayHub 2023</div>
     </div>
   );
 }

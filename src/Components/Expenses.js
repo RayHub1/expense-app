@@ -26,7 +26,7 @@ function Expenses(props) {
   }
 
   return (
-    <div className="lg:w-1/2 w-96 bg-black   p-5 rounded-md my-10">
+    <div className="lg:w-1/2 w-80 bg-black   p-3 rounded-md my-5">
       <ExpenseFilter
         defaultYear={filteredYear}
         onChangeFilter={filterChangeHandler}

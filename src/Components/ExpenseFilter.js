@@ -7,9 +7,9 @@ function ExpenseFilter(props) {
   return (
     <div>
       <div>
-        <label className="text-white">Filter by year</label>
+        <label className="text-white capitalize">Filter by year</label>
         <select
-          className="float-right"
+          className="float-right h-8 w-20 text-md"
           value={props.defaultYear}
           onChange={selectDropdownHandler}
         >

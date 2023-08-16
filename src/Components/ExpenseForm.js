@@ -29,22 +29,22 @@ function ExpenseForm(props) {
   };
 
   return (
-    <form>
-      <div className="grid grid-cols-2 p-5 gap-2" onSubmit={submitHandler}>
+    <form onSubmit={submitHandler}>
+      <div className="flex flex-wrap lg:flex-row flex-col justify-around p-5" >
         <div className=" flex flex-col">
-          <label className="text-2xl font-bold">Title</label>
+          <label className="lg:text-2xl text-md font-bold">Title</label>
           <input
             type="text"
-            className="lg:h-10 lg:w-60 rounded-sm"
+            className="h-10  lg:w-60 rounded-sm focus:outline-none px-2 py-1"
             onChange={titleChangeHandler}
             value={enteredTitle}
           />
         </div>
         <div className=" flex flex-col">
-          <label className="text-2xl font-bold">Amount</label>
+          <label className="lg:text-2xl text-md font-bold">Amount</label>
           <input
             type="number"
-            className="lg:h-10 lgw-60 rounded-sm"
+            className="h-10 lg:w-60 rounded-sm focus:outline-none px-2 py-1"
             onChange={amountChangeHandler}
             min="0"
             step="0.01"
@@ -52,30 +52,31 @@ function ExpenseForm(props) {
           />
         </div>
         <div className=" flex flex-col">
-          <label className="text-2xl font-bold">date</label>
+          <label className="lg:text-2xl text-md font-bold">Date</label>
           <input
             type="date"
             min="2019-12-3"
-            className="lg:h-10 lg:w-60 rounded-sm"
+            className="h-10 lg:w-60 rounded-sm focus:outline-none px-2 py-1"
             onChange={dateChangeHandler}
             value={enteredDate}
           />
         </div>
-      </div>
-      <div className="flex justify-center items-center space-x-10 my-3	">
+        <div className=" flex justify-center items-center	space-x-5">
         <button
-          className="bg-purple-800 lg:h-10 lg:w-1/5 w-28 text-white mt-8 rounded p-1"
+          className="bg-purple-800 h-10  w-28 text-white mt-8 rounded p-1"
           onClick={props.onCancel}
         >
           Cancel
         </button>
         <button
           type="submit"
-          className="bg-purple-800 lg:h-10 lg:w-1/5 w-28 text-white mt-8 rounded p-1"
+          className="bg-purple-800 h-10 w-28 text-white mt-8 rounded p-1"
         >
           Add Expense
         </button>
       </div>
+      </div>
+       
     </form>
   );
 }

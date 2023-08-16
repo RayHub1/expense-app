@@ -6,8 +6,8 @@ function ExpenseItems(props) {
     <div className="bg-gray-500 mt-5 p-3 rounded-lg flex justify-between items-center">
       <div className="flex lg:w-1/7 justify-between  items-center text-left">
         <ExpenseDate date={props.date} />
-        <div className="mr-10">
-          <h1 className=" text-white lg:text-2xl font-bold text-left">
+        <div className="">
+          <h1 className=" text-white lg:text-2xl text-sm font-bold text-left">
             {props.title}
           </h1>
         </div>

@@ -7,9 +7,9 @@ function ExpenseDate(props) {
   return (
     <div>
       <div
-        className="bg-black text-white flex flex-col items-center rounded px-5 py-2
+        className="bg-black text-white flex flex-col items-center rounded px-3 py-1
       
-      border-2 border-white lg:ml-8 mr-8 text-sm"
+      border-2 border-white lg:ml-8 mr-3 text-sm"
       >
         <div>{month}</div>
         <div>{year}</div>
